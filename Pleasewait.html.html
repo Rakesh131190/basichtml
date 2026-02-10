@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Please Wait...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .anime-loader {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 6px solid rgba(255, 255, 255, 0.2);
+      border-top: 6px solid #ff6ec7;
+      animation: spin 1.2s linear infinite;
+      margin: 0 auto 30px;
+      box-shadow: 0 0 20px #ff6ec7;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    .dots::after {
+      content: "";
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+
+    @keyframes dots {
+      0% { content: ""; }
+      25% { content: "."; }
+      50% { content: ".."; }
+      75% { content: "..."; }
+      100% { content: ""; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="anime-loader"></div>
+    <h1>Loading not Completed, If you think it takes too much time then read the below line <span class="dots"></span></h1>
+    <p>PLEASE WAIT, UNTIL FEB 14th ✨</p>
+  </div>
+</body>
+</html>
